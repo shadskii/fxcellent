@@ -24,10 +24,15 @@
 
 package freetimelabs.example.fx;
 
+import freetimelabs.fxcellent.reactor.flux.FxFluxFrom;
+import freetimelabs.fxcellent.reactor.schedulers.FxSchedulers;
+import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
+import reactor.core.Disposable;
 
 import javax.annotation.PostConstruct;
 
@@ -44,6 +49,15 @@ public class ExampleController1
     @PostConstruct //A @PostConstruct method replaces the use of @FXML public void initialize()
     public void init()
     {
-        button1.setOnAction(action -> middleText.setText("Hello from controller1!"));
+        Platform.runLater(() -> button1.setText("Controller 1"));
     }
+
+    @Bean(destroyMethod = "dispose") // Specifying the destroy method ensures proper cleanup
+    public Disposable updateText()
+    {
+        return FxFluxFrom.nodeActionEvent(button1)
+                         .publishOn(FxSchedulers.getFxSchedulerFromReactor())
+                         .subscribe(e -> middleText.setText("Hello from controller1!"));
+    }
+
 }

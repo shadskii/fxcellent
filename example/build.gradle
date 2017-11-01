@@ -11,5 +11,6 @@ repositories {
 
 dependencies {
     compile project(':fxcellent-spring')
+    compile project(':fxcellent-reactor')
     compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '1.5.8.RELEASE'
 }

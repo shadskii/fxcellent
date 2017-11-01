@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="example_main" target="1.8" />
+      <module name="example_test" target="1.8" />
+      <module name="fxcellent-reactor_main" target="1.8" />
+      <module name="fxcellent-reactor_test" target="1.8" />
+      <module name="fxcellent-spring_main" target="1.8" />
+      <module name="fxcellent-spring_test" target="1.8" />
+      <module name="fxcellent-testing_main" target="1.8" />
+      <module name="fxcellent-testing_test" target="1.8" />
+      <module name="fxcellent_main" target="1.8" />
+      <module name="fxcellent_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

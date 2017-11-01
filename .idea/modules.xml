@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/example.iml" filepath="$PROJECT_DIR$/.idea/modules/example.iml" group="example" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/example/example_main.iml" filepath="$PROJECT_DIR$/.idea/modules/example/example_main.iml" group="example" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/example/example_test.iml" filepath="$PROJECT_DIR$/.idea/modules/example/example_test.iml" group="example" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fxcellent.iml" filepath="$PROJECT_DIR$/.idea/modules/fxcellent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fxcellent-reactor.iml" filepath="$PROJECT_DIR$/.idea/modules/fxcellent-reactor.iml" group="fxcellent-reactor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fxcellent-reactor/fxcellent-reactor_main.iml" filepath="$PROJECT_DIR$/.idea/modules/fxcellent-reactor/fxcellent-reactor_main.iml" group="fxcellent-reactor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fxcellent-reactor/fxcellent-reactor_test.iml" filepath="$PROJECT_DIR$/.idea/modules/fxcellent-reactor/fxcellent-reactor_test.iml" group="fxcellent-reactor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fxcellent-spring.iml" filepath="$PROJECT_DIR$/.idea/modules/fxcellent-spring.iml" group="fxcellent-spring" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fxcellent-spring/fxcellent-spring_main.iml" filepath="$PROJECT_DIR$/.idea/modules/fxcellent-spring/fxcellent-spring_main.iml" group="fxcellent-spring" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fxcellent-spring/fxcellent-spring_test.iml" filepath="$PROJECT_DIR$/.idea/modules/fxcellent-spring/fxcellent-spring_test.iml" group="fxcellent-spring" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fxcellent-testing.iml" filepath="$PROJECT_DIR$/.idea/modules/fxcellent-testing.iml" group="fxcellent-testing" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fxcellent-testing/fxcellent-testing_main.iml" filepath="$PROJECT_DIR$/.idea/modules/fxcellent-testing/fxcellent-testing_main.iml" group="fxcellent-testing" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fxcellent-testing/fxcellent-testing_test.iml" filepath="$PROJECT_DIR$/.idea/modules/fxcellent-testing/fxcellent-testing_test.iml" group="fxcellent-testing" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fxcellent_main.iml" filepath="$PROJECT_DIR$/.idea/modules/fxcellent_main.iml" group="fxcellent" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fxcellent_test.iml" filepath="$PROJECT_DIR$/.idea/modules/fxcellent_test.iml" group="fxcellent" />
+    </modules>
+  </component>
+</project>

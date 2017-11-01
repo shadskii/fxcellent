@@ -1,0 +1,15 @@
+group 'freetimelabs.fx.fxcellent'
+version '0.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':fxcellent-spring')
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '1.5.8.RELEASE'
+}

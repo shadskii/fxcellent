@@ -1,0 +1,6 @@
+rootProject.name = 'fxcellent'
+include 'fxcellent-reactor'
+include 'fxcellent-spring'
+include 'fxcellent-testing'
+include 'example'
+

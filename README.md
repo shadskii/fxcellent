@@ -1,5 +1,5 @@
-# fxcellent
-fxcellent is a JavaFX integration library. The purpose of this is to provide support for integrating JavaFX with other frameworks. The following libraries are supported currently:
+# (fx)cellent
+(fx)cellent is a JavaFX integration library. The purpose of this is to provide support for integrating JavaFX with other frameworks. The following libraries are supported currently:
 * [Project Reactor](http://projectreactor.io/)
 * [Spring Framework](https://projects.spring.io/spring-framework/)
 
@@ -60,7 +60,7 @@ Controllers now can inject JavaFX components via `@Autowired`
 ```
 
 ### Reactor Integration
-fxcellent-reactor provides an easy to use and fluent API for leveraging reactor for JavaFX event handling.
+(fx)cellent-reactor provides an easy to use and fluent API for leveraging reactor for JavaFX event handling.
 
 ```java
 private Button btn;

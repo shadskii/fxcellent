@@ -107,7 +107,7 @@ public class FxFluxFromTest
     {
         SimpleBooleanProperty observable = new SimpleBooleanProperty(false);
         AtomicBoolean actual = new AtomicBoolean();
-        FxFluxFrom.oberservable(observable)
+        FxFluxFrom.observable(observable)
                   .publishOn(thread)
                   .subscribe(actual::set);
         observable.set(true);
@@ -132,6 +132,33 @@ public class FxFluxFromTest
         assertThat(actual.get()).containsExactly(1, 2, 3);
     }
 
+    @Test
+    public void testSceneEvent() throws TimeoutException, InterruptedException
+    {
+        AtomicReference<Scene> actual = new AtomicReference<>();
+        AtomicReference<Node> actualNode = new AtomicReference<>();
+        setStage(stage ->
+        {
+            Pane pane = new Pane();
+            Scene scene = new Scene(pane);
+            actualNode.set(pane);
+            actual.set(scene);
+            stage.setScene(scene);
+        });
+
+        AtomicReference<Event> event = new AtomicReference<>();
+        Scene scene = actual.get();
+
+        FxFluxFrom.sceneEvent(scene, KeyEvent.KEY_TYPED)
+                  .publishOn(thread)
+                  .subscribe(event::set);
+
+
+        actualNode.get()
+                  .fireEvent(new KeyEvent(KeyEvent.KEY_TYPED, "", "", KeyCode.CODE_INPUT, false, false, false, false));
+        assertThat(event.get()
+                        .getSource()).isEqualTo(scene);
+    }
 
     public static final class TestApp extends Application
     {

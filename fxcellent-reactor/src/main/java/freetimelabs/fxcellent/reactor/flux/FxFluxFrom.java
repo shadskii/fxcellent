@@ -172,7 +172,7 @@ public final class FxFluxFrom
      * Creates a Flux that emits all ActionEvents that originate from the argument Node. Immediately after creation of
      * this Flux users should call {@link Flux#subscribeOn(Scheduler)} with a {@link Scheduler} operating on the JavaFX
      * application to ensure that event emissions occur on the JavaFX Thread. Equivalent to using {@link
-     * #nodeEvent(Node, EventType)}
+     * #nodeEvent(Node, EventType)}.
      *
      * @param source - The target node where events originate from.
      * @return A Flux containing all {@link ActionEvent}s from the argument node.

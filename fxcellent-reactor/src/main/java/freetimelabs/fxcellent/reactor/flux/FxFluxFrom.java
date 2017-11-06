@@ -34,6 +34,7 @@ import javafx.stage.Window;
 import reactor.core.Disposable;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Scheduler;
 
 import java.util.Objects;
 import java.util.Optional;
@@ -65,7 +66,9 @@ public final class FxFluxFrom
     }
 
     /**
-     * Creates a {@link Flux} which emits all Events of the argument {@link EventType} from the argument {@link Node}
+     * Creates a {@link Flux} which emits all Events of the argument {@link EventType} from the argument {@link Node}.
+     * Immediately after creation of this Flux users should call {@link Flux#subscribeOn(Scheduler)} with a {@link
+     * Scheduler} operating on the JavaFX application to ensure that event emissions occur on the JavaFX Thread.
      *
      * @param source    - The target Node where UI events are emitted from.
      * @param eventType - The type of event to listen for.
@@ -84,6 +87,8 @@ public final class FxFluxFrom
 
     /**
      * Creates a {@link Flux} which emits all Events of the argument {@link EventType} from the argument {@link Scene}.
+     * Immediately after creation of this Flux users should call {@link Flux#subscribeOn(Scheduler)} with a {@link
+     * Scheduler} operating on the JavaFX application to ensure that event emissions occur on the JavaFX Thread.
      *
      * @param source    - The target Scene where UI events are emitted from.
      * @param eventType - The type of event to listen for.
@@ -102,6 +107,8 @@ public final class FxFluxFrom
 
     /**
      * Creates a {@link Flux} which emits all Events of the argument {@link EventType} from the argument {@link Stage}.
+     * Immediately after creation of this Flux users should call {@link Flux#subscribeOn(Scheduler)} with a {@link
+     * Scheduler} operating on the JavaFX application to ensure that event emissions occur on the JavaFX Thread.
      *
      * @param source    - The target Stage where UI events are emitted from.
      * @param eventType - The type of event to listen for.
@@ -119,8 +126,9 @@ public final class FxFluxFrom
     }
 
     /**
-     * Creates a {@link Flux} which emits all Events of the argument {@link EventType} from the argument {@link
-     * Window}.
+     * Creates a {@link Flux} which emits all Events of the argument {@link EventType} from the argument {@link Window}.
+     * Immediately after creation of this Flux users should call {@link Flux#subscribeOn(Scheduler)} with a {@link
+     * Scheduler} operating on the JavaFX application to ensure that event emissions occur on the JavaFX Thread.
      *
      * @param source    - The target Window where UI events are emitted from.
      * @param eventType - The type of event to listen for.
@@ -144,7 +152,7 @@ public final class FxFluxFrom
      * @param <T>             - The type of the observable.
      * @return A Flux that emits the newest value of the argument observable when it has been changed.
      */
-    public static <T> Flux<T> oberservable(ObservableValue<T> observableValue)
+    public static <T> Flux<T> observable(ObservableValue<T> observableValue)
     {
         return Flux.create(emitter ->
         {
@@ -161,7 +169,9 @@ public final class FxFluxFrom
     }
 
     /**
-     * Creates a Flux that emits all ActionEvents that originate from the argument Node. Equivalent to using {@link
+     * Creates a Flux that emits all ActionEvents that originate from the argument Node. Immediately after creation of
+     * this Flux users should call {@link Flux#subscribeOn(Scheduler)} with a {@link Scheduler} operating on the JavaFX
+     * application to ensure that event emissions occur on the JavaFX Thread. Equivalent to using {@link
      * #nodeEvent(Node, EventType)}
      *
      * @param source - The target node where events originate from.
